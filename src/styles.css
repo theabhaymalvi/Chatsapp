@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+:root {
+	--dark-color-a: #667aff;
+	--dark-color-b: #7386ff;
+	--light-color: #e6e9ff;
+	--success-color: #5cb85c;
+	--error-color: #d9534f;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	background: var(--light-color);
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.btn {
+	cursor: pointer;
+	padding: 10px 1rem;
+	background: #F8F8F8;
+	color: var(--dark-color-a);
+	border: 0;
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+/* Chat Page */
+
+.chat-container {
+	height: 100vh;
+	max-width: 1100px;
+	background: #fff;
+	margin-left: auto;
+    margin-right: auto;
+	overflow: hidden;
+}
+
+.chat-header {
+	height: 10vh;
+	background: #0F4C75;
+	color: #fff;
+	padding: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.chat-header h1 {
+    display: flex;
+    align-items: center;
+}
+
+.chat-main {
+    height: 80vh;
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+}
+
+.chat-sidebar {
+	background: #3282B8;
+	color: #fff;
+	padding: 20px 20px 60px;
+	overflow-y: scroll;
+}
+
+.chat-sidebar h2 {
+	font-size: 1rem;
+	background: #0F4C75;
+	padding: 10px 15px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.chat-sidebar h3 {
+    display: flex;
+    align-items: center;
+	margin-bottom: 10px;
+}
+
+.chat-sidebar ul {
+	background-color: #0F4C75;
+	box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	padding: 10px 10px;
+}
+
+.chat-sidebar li {
+	margin: 5px;
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+.chat-messages {
+	padding: 30px;
+	max-height: 500px;
+	overflow-y: scroll;
+}
+
+.chat-messages .message {
+	padding: 10px;
+	margin-bottom: 15px;
+	overflow-wrap: break-word;
+}
+
+.chat-messages .message .meta {
+	font-size: 15px;
+	font-weight: bold;
+	color: var(--dark-color-b);
+	opacity: 0.7;
+	margin-bottom: 7px;
+}
+
+.chat-messages .message .meta span {
+	color: #777;
+}
+
+.chat-form-container {
+	padding: 20px 30px;
+	background-color: #0F4C75;
+}
+
+.chat-form-container form {
+	display: flex;
+}
+
+.chat-form-container input[type='text'] {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	flex: 1;
+}
+
+.main-icon {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+}
+
+/* Join Page */
+.join-container {
+	max-width: 500px;
+	margin: 80px auto;
+	color: #fff;
+}
+
+.join-header {
+	text-align: center;
+	padding: 20px;
+	background: var(--dark-color-a);
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.join-main {
+	padding: 30px 40px;
+	background: var(--dark-color-b);
+}
+
+.join-main p {
+	margin-bottom: 20px;
+}
+
+.join-main .form-control {
+	margin-bottom: 20px;
+}
+
+.join-main label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.join-main input[type='text'] {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	width: 100%;
+}
+
+.join-main select {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	width: 100%;
+}
+
+.join-main .btn {
+	margin-top: 20px;
+	width: 100%;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.message {
+	width: 70%;
+	margin-top: 0.5rem;
+	padding: 5px 10px;
+	border-radius: 10px;
+	z-index: -1;
+  }
+  
+.message p {
+margin-right: 0.75rem;
+margin-bottom: 1px;
+}
+
+
+.message p small {
+	color: #0f4c75;
+	margin-right: 5px;
+	font-size: 12px;
+  }
+
+  @keyframes unfoldX {
+	0% {
+	  transform: scaleX(0);
+	}
+	100% {
+	  transform: scaleX(1);
+	}
+  }
+
+  .message-bot {
+	font-weight: 600;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	color: #f8f8f8;
+	border-radius: 40px;
+	background-color: #3282b8;
+	animation-name: unfoldX;
+	animation-duration: 0.5s;
+	animation-timing-function: cubic-bezier(0.8, -0.17, 0.27, 1.55);
+	transform-origin: center;
+  }
+
+  .message-chat {
+	color: #1b262c;
+	background-color: #bbe1fa;
+	animation-name: unfoldX;
+	animation-duration: 0.5s;
+	animation-timing-function: cubic-bezier(0.8, -0.17, 0.27, 1.55);
+	transform-origin: left;
+  }
+  
+  .message-chat-self {
+	background-color: #7fdbda;
+	margin-left: auto;
+	animation-name: unfoldX;
+	animation-duration: 0.5s;
+	animation-timing-function: cubic-bezier(0.8, -0.17, 0.27, 1.55);
+	transform-origin: right;
+  }
+@media (max-width: 700px) {
+	.chat-main {
+		display: block;
+	}
+
+	.chat-sidebar {
+		display: none;
+	}
+}
