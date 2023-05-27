@@ -1,7 +1,9 @@
+const dotenv = require('dotenv');
 const express = require("express");
 const { userJoin, userLeave, getCurUser, roomUsers } = require("./src/users");
 const {createServer} = require("http");
 const path = require('path');
+dotenv.config();
 
 const app = express();
 const server = createServer(app);
@@ -75,7 +77,7 @@ io.on("connection", (socket) => {
   });
 });
 
-const port = 3001; // Choose your desired port number
+const port = process.env.PORT || 3000; // Choose your desired port number
 server.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });

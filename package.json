@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
+    "dotenv": "^16.0.3",
     "moment": "^2.29.4",
     "path": "^0.12.7",
     "react": "^18.2.0",
@@ -14,7 +15,7 @@
     "socket.io-client": "^4.6.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node Server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

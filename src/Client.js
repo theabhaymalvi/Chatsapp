@@ -20,7 +20,7 @@ const Client = () => {
   let initSocket = async () => {
     console.log("Initializing socket...");
     await fetch("../server/Server");
-    let socket = io("http://localhost:3001/");
+    let socket = io("http://localhost:3000/");
 
     // new chat messages
     socket.on("chat-message", (message) => {
